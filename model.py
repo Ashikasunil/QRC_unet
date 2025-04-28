@@ -1,8 +1,8 @@
 import torch
 import torchvision.transforms as transforms
 
-def load_model(qrc_unet_trained (1).pth):
-    model = torch.load(qrc_unet_trained (1).pth, map_location=torch.device('cpu'))
+def load_model(model_path):
+    model = torch.load(model_path, map_location=torch.device('cpu'))
     model.eval()
     return model
 
