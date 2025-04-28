@@ -6,7 +6,7 @@ import torch
 from model import load_model, preprocess_image, predict
 
 # Load the trained model
-model_path = 'qrc_unet_trained (1).pth'  # Update this path if different
+model_path = 'qrc_unet_trained (1).pth'  # Update this path to match your model file
 model = load_model(model_path)
 
 # Hard-coded metrics (replace with your actual values)
