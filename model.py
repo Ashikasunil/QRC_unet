@@ -5,7 +5,13 @@ import torch
 import torchvision.transforms as transforms
 
 def load_model(model_path):
-    model = torch.load(model_path, map_location=torch.device('cpu'))
+    loaded = torch.load(model_path, map_location=torch.device('cpu'))
+    if isinstance(loaded, dict):  # state_dict
+        from model_arch import QRC_UNet
+        model = QRC_UNet()
+        model.load_state_dict(loaded)
+    else:  # full model
+        model = loaded
     model.eval()
     return model
 
