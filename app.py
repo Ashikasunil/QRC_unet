@@ -5,7 +5,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 from model import load_model, preprocess_image, predict
 
-model_path = 'qrc_unet_trained.pth'
+model_path = 'qrc_unet_trained (3).pth'
 model = load_model(model_path)
 
 st.title("Lung CT Nodule Segmentation - QRC-UNet")
