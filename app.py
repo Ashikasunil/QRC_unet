@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import torch
 from model import load_model, preprocess_image, predict
 
-model_path = 'qrc_unet_trained.pth'  # make sure this file is present
+model_path = 'qrc_unet_trained (3).pth'  # make sure this file is present
 model = load_model(model_path)
 
 st.title("Lung CT Nodule Segmentation - QRC-UNet")
