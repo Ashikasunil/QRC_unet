@@ -15,7 +15,7 @@ def preprocess_image(uploaded_image):
         transforms.ToTensor(),
     ])
     image = transform(uploaded_image)
-    image = image.unsqueeze(0)  # Add batch dimension
+    image = image.unsqueeze(0)
     return image
 
 def predict(model, image_tensor):
