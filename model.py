@@ -1,3 +1,4 @@
+
 # model.py
 
 import torch
@@ -23,4 +24,3 @@ def predict(model, image_tensor):
         output = torch.sigmoid(output)
         output = (output > 0.5).float()
     return output.squeeze(0).squeeze(0).numpy()
-
